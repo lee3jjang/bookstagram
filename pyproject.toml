@@ -6,6 +6,7 @@ authors = ["Lee Sang Jin <lee3jjang@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+kivymd = {git = "https://github.com/kivymd/KivyMD"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
