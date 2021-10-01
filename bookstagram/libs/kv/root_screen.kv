@@ -1,5 +1,9 @@
 #: import gch kivy.utils.get_color_from_hex
 #: import StiffScrollEffect kivymd.effects.stiffscroll.StiffScrollEffect
+#: import BookstagramRootScreen libs.baseclass.root_screen.BookstagramRootScreen
+#: import RootToolbar libs.baseclass.root_screen.RootToolbar
+#: import MDBottomNavigation libs.baseclass.root_screen.MDBottomNavigation
+
 
 <BookstagramRootScreen>:
     md_bg_color: gch("#33333d")
@@ -7,21 +11,36 @@
     MDBoxLayout:
         orientation: 'vertical'
 
-        # NavigationBar:
-        #     id: nav_bar
+        RootToolbar:
+            id: root_toolbar
+            
+        RootBottomNavigation:
 
-        #     NavigationItem:
-        #         text: "OVERVIEW"
-        #         icon: "chart-pie"
-        #         on_release:
-        #             scr_manager.transition.direction = "right"
-        #             scr_manager.current = "OVERVIEW"
 
-        ScreenManager:
-            id: scr_manager
+<RootToolbar>:
+    title: "Bookstagram"
+    right_action_items: [['dots-vertical', lambda x: x]]
 
-            BookstagramOverviewScreen:
-                name: "OVERVIEW"
 
-            BookstagramAccountsScreen:
-                name: "ACCOUNTS"
+<RootBottomNavigation>:
+    use_text: False
+
+    RootBottomNavigationItem:
+        name: 'screen 1'
+        icon: 'language-python'
+
+    RootBottomNavigationItem:
+        name: 'screen 2'
+        icon: 'language-cpp'
+
+    RootBottomNavigationItem:
+        name: 'screen 3'
+        icon: 'language-javascript'
+
+    RootBottomNavigationItem:
+        name: 'screen 4'
+        icon: 'language-php'
+
+    RootBottomNavigationItem:
+        name: 'screen 5'
+        icon: 'language-java'

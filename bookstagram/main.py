@@ -38,8 +38,9 @@ class MainApp(MDApp):
         self.title = "Bookstagram"
 
     def build(self):
-        self.theme_cls.primary_palette = "Green"
-        self.theme_cls.theme_style = "Dark"
+        self.theme_cls.primary_palette = "Red"
+        self.theme_cls.primary_hue = "100"
+        self.theme_cls.theme_style = "Light"
         FONT_PATH = f"{os.environ['BOOKSTAGRAM_ROOT']}/assets/fonts/"
         self.root = Builder.load_string(KV)
         self.theme_cls.font_styles.update({
