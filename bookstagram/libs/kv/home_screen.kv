@@ -22,8 +22,8 @@
                 refresh_callback: self.refresh_callback
 
                 MDGridLayout:
-                    size_hint_y: None
-                    height: self.minimum_height
+                    id: home_box
+                    adaptive_height: True
                     cols: 1
 
                     MainCard:
