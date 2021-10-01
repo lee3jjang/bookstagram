@@ -3,10 +3,8 @@ from kivymd.uix.card import MDCard
 
 
 class BookstagramHomeScreen(MDScreen):
-    
-    def refresh_callback(self, *args):
-        print("Hello Refresh")
+    pass
         
-
+        
 class MainCard(MDCard):
     pass

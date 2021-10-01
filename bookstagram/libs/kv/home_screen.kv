@@ -7,20 +7,25 @@
     md_bg_color: gch("#ffffff")
 
     MDBoxLayout:
-        orientation: 'vertical'
+        orientation: "vertical"
 
-        MDScrollViewRefreshLayout:
-            id: home_layout
-            refresh_callback: self.refresh_callback
+        MDToolbar:
+            title: "Bookstagram"
+            right_action_items: [['dots-vertical', lambda x: x]]
 
-            MDGridLayout:
-                id: home_box
-                adaptive_height: True
-                cols: 1
+        MDBoxLayout:
+            orientation: "vertical"
 
-                MainCard:
+            MDScrollViewRefreshLayout:
+                id: home_layout
+                refresh_callback: self.refresh_callback
 
-                    
+                MDGridLayout:
+                    id: home_box
+                    adaptive_height: True
+                    cols: 1
+
+                    MainCard:
 
 
 <MainCard>:

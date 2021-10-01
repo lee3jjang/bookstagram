@@ -1,7 +1,6 @@
 #: import gch kivy.utils.get_color_from_hex
 #: import StiffScrollEffect kivymd.effects.stiffscroll.StiffScrollEffect
 #: import BookstagramRootScreen libs.baseclass.root_screen.BookstagramRootScreen
-#: import RootToolbar libs.baseclass.root_screen.RootToolbar
 #: import MDBottomNavigation libs.baseclass.root_screen.MDBottomNavigation
 
 
@@ -10,16 +9,9 @@
 
     MDBoxLayout:
         orientation: 'vertical'
-
-        RootToolbar:
-            id: root_toolbar
-            
+           
         RootBottomNavigation:
 
-
-<RootToolbar>:
-    title: "Bookstagram"
-    right_action_items: [['dots-vertical', lambda x: x]]
 
 
 <RootBottomNavigation>:
@@ -44,5 +36,7 @@
         icon: 'language-php'
 
     RootBottomNavigationItem:
-        name: 'screen 5'
+        name: 'mypage'
         icon: 'language-java'
+
+        BookstagramMypageScreen:

@@ -1,0 +1,39 @@
+#: import gch kivy.utils.get_color_from_hex
+#: import BookstagramMypageScreen libs.baseclass.mypage_screen.BookstagramMypageScreen
+#: import ContentCustomSheet libs.baseclass.mypage_screen.ContentCustomSheet
+
+
+<BookstagramMypageScreen>:
+    md_bg_color: gch("#ffffff")
+
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDToolbar:
+            title: "username"
+            right_action_items: [['language-cpp', lambda x: x], ['language-python', lambda x: root.show_bottom_sheet()]]
+
+        MDLabel:
+
+
+<ContentCustomSheet>:
+    orientation: "vertical"
+    size_hint_y: None
+
+    ScrollView:
+
+        MDGridLayout:
+            cols: 1
+            adaptive_height: True
+
+            OneLineIconListItem:
+                text: "Preview"
+
+                IconLeftWidget:
+                    icon: "page-previous"
+
+            OneLineIconListItem:
+                text: "Exit"
+
+                IconLeftWidget:
+                    icon: "exit-to-app"
