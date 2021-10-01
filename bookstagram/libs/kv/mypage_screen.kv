@@ -10,10 +10,42 @@
         orientation: "vertical"
 
         MDToolbar:
-            title: "username"
-            right_action_items: [['language-cpp', lambda x: x], ['language-python', lambda x: root.show_bottom_sheet()]]
+            md_bg_color: gch("#ffffff")
+            title: "sangjin.lee"
+            right_action_items: [['plus-box-outline', lambda x: x], ['menu', lambda x: root.show_bottom_sheet()]]
+
+        MDBoxLayout:
+            FloatLayout:
+                canvas:
+                    Color:
+                        rgb: 1, 1, 1
+                    Ellipse:
+                        pos: 0, 400
+                        size: 100, 100
+                        source: "assets/images/profile.jpg"
+                        angle_start: 0
+                        angle_end: 360
+            
+            MDBoxLayout:
+                MDFlatButton:
+                    text: "Post"
+
+                MDFlatButton:
+                    text: "Follower"
+
+                MDFlatButton:
+                    text: "Following"
 
         MDLabel:
+            size_hint: 1, None
+            text: "SangJin Lee"
+
+        MDFlatButton:
+            size_hint: 1, None
+            text: "Edit Profile"
+
+        MDLabel:
+
 
 
 <ContentCustomSheet>:
