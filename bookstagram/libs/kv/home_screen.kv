@@ -1,0 +1,49 @@
+#: import gch kivy.utils.get_color_from_hex
+#: import BookstagramHomeScreen libs.baseclass.home_screen.BookstagramHomeScreen
+#: import MainCard libs.baseclass.home_screen.MainCard
+
+
+<BookstagramHomeScreen>:
+    md_bg_color: gch("#ffffff")
+
+    MDBoxLayout:
+        orientation: 'vertical'
+
+        MDScrollViewRefreshLayout:
+            id: home_layout
+            refresh_callback: self.refresh_callback
+
+            MDGridLayout:
+                id: home_box
+                adaptive_height: True
+                cols: 1
+
+                MainCard:
+
+                    
+
+
+<MainCard>:
+    orientation: "vertical"
+    padding: "8dp"
+    adaptive_height: True
+
+    MDBoxLayout:
+        orientation: "vertical"
+        adaptive_height: True
+
+        MDToolbar:
+            adaptive_height: True
+            title: "username"
+            right_action_items: [['dots-vertical', lambda x: x]]
+
+        FitImage:
+            adaptive_height: True
+            size_hint: None, None
+            source: "assets/images/logo.png"
+
+        MDLabel:
+            adaptive_height: True
+            text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+            
+
