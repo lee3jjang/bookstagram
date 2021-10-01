@@ -12,41 +12,53 @@
         MDToolbar:
             title: "Bookstagram"
             md_bg_color: gch("#ffffff")
-            right_action_items: [['dots-vertical', lambda x: x]]
+            right_action_items: [["send-outline", lambda x: x]]
+        
+        ScrollView:
 
-        MDBoxLayout:
-            orientation: "vertical"
+            MDList:
+                padding: 0
 
-            MDScrollViewRefreshLayout:
-                id: home_layout
-                refresh_callback: self.refresh_callback
+                MainCard:
 
-                MDGridLayout:
-                    id: home_box
-                    adaptive_height: True
-                    cols: 1
+                MainCard:
 
-                    MainCard:
+                MainCard:
 
 
 <MainCard>:
     orientation: "vertical"
-    padding: "8dp"
-    adaptive_height: True
+    size_hint_y: None
+    height: content.height
 
     MDBoxLayout:
+        id: content
         orientation: "vertical"
         adaptive_height: True
 
         MDToolbar:
             adaptive_height: True
             title: "username"
+            md_bg_color: gch("#ffffff")
             right_action_items: [['dots-vertical', lambda x: x]]
 
         FitImage:
-            adaptive_height: True
-            size_hint: None, None
+            size_hint: 1, None
+            height: "500dp"
             source: "assets/images/logo.png"
+
+        MDBoxLayout:
+            orientation: "horizontal"
+            adaptive_height: True
+
+            MDIconButton:
+                icon: "heart-outline"
+
+            MDIconButton:
+                icon: "chat-outline"
+
+            MDIconButton:
+                icon: "send-outline"
 
         MDLabel:
             adaptive_height: True
