@@ -22,12 +22,13 @@ for kv_file in os.listdir(KV_DIR):
 
 KV = """
 #:import FadeTransition kivy.uix.screenmanager.FadeTransition
+#:import BookstagramRootScreen libs.baseclass.root_screen.BookstagramRootScreen
 
 ScreenManager:
     transition: FadeTransition()
     
-    Screen:
-        name: "temporary"
+    BookstagramRootScreen:
+        name: "bookstagram root screen"
 """
 
 
